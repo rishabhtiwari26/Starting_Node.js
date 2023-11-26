@@ -7,6 +7,7 @@ const requestHandler = (req,res)=>{
         htmlContent=htmlContent+data
         console.log(htmlContent)
         if (req.url=='/'){
+        
             res.write('<html>')
             res.write('<head><title>My First Page</title></head>')
             res.write(`<body><h2>${htmlContent}</h2><form action='/message' method='POST'><input type='text' name='msg'><button type='submit'>Send</button></form></body>`)
